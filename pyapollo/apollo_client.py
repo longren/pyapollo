@@ -162,7 +162,7 @@ if __name__ == '__main__':
     ch.setFormatter(formatter)
     root.addHandler(ch)
 
-    client = ApolloClient('pycrawler')
+    client = ApolloClient('test1212',config_server_url='http://106.54.227.205:8080',timeout=65)
     client.start()
     if sys.version_info[0] < 3:
         v = raw_input('Press any key to quit...')
@@ -171,4 +171,4 @@ if __name__ == '__main__':
 
     client.stop()
     while not client.stopped:
-        pass
+        exit(0)
